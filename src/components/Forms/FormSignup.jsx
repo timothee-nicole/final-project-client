@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { UserContext } from "../Auth/UserContext";
 import apiHandler from "../../api/apiHandler";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField'
 
 class FormSignup extends Component {
   static contextType = UserContext;
@@ -9,6 +11,9 @@ class FormSignup extends Component {
   state = {
     email: "",
     password: "",
+    lastName:"",
+    firstName:"",
+    birthDate:"",
   };
 
   handleChange = (event) => {
@@ -20,6 +25,7 @@ class FormSignup extends Component {
         : event.target.value;
 
     const key = event.target.name;
+    // console.log(key, value)
 
     this.setState({ [key]: value });
   };
@@ -40,13 +46,26 @@ class FormSignup extends Component {
 
   render() {
     return (
-      <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" />
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" />
-        <button>Submit</button>
+      <div className='backgroundFormSignUp'>
+
+      <form onChange={this.handleChange} onSubmit={this.handleSubmit} className="form">
+      <img src="/favicon.ico" alt="toto" /><br />
+      <h1>Please Sign Up</h1><br />
+       
+        <TextField style={{width: '40%'}} variant="outlined" type="text" id="firstName" label='First Name' name="firstName" /><br />
+
+        <TextField style={{width: '40%'}} variant="outlined" type="text" id="lastName" label='Last Name' name="lastName" /><br />
+        
+        <TextField style={{width: '40%'}} variant="outlined" type="date" id="birthDate" name="birthDate"/><br />
+        
+        <TextField style={{width: '40%'}} variant="outlined" type="email" id="email" label='E-mail' name="email" /><br />
+        
+        <TextField style={{width: '40%'}} variant="outlined" type="password" id="password" label='Password' name="password" /><br />
+
+
+        <Button color="primary" variant="contained" onClick={this.handleSubmit}>Submit</Button>
       </form>
+      </div>
     );
   }
 }

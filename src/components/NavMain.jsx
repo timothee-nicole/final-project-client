@@ -41,35 +41,33 @@ import DestinationList from "./DestinationList";
           
         {this.props.context.isLoggedIn && (
           <React.Fragment>
-          <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
           <ul className="nav-log">
-            <li>
-              <NavLink to="/profile">
+          <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group">
+            
+              <Button><NavLink to="/profile">
                 {this.props.context.user && this.props.context.user.email}
-              </NavLink>
-            </li>
-            <li>
+              </NavLink></Button>
+            
+            <Button>
               <p onClick={this.handleLogout}>Logout</p>
-            </li>
-          </ul>
+            </Button>
           </ButtonGroup>
+          </ul>
           </React.Fragment>
         )}
         {!this.props.context.isLoggedIn && (
           <React.Fragment>
           
           <ul className="nav-log">
-          <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <li>
-              <Button color="secondary" variant="contained">
+          <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group">
+            
+              <Button>
               <NavLink to="/signin">Log in</NavLink>
               </Button>
-            </li>
-            <li>
-              <Button color="secondary" variant="contained">
+            
+              <Button>
               <NavLink to="/signup">Create account</NavLink>
               </Button>
-            </li>
             </ButtonGroup>
           </ul>
 

@@ -44,10 +44,69 @@ export default {
       .catch(errorHandler);
   },
 
-  getItems() {
+// Profile 
+  getProfile() {
     return service
-      .get("/api/items")
-      .then((res) => res.data)
-      .catch(errorHandler);
+    .get("/profile/me")
+    .then((apiRes) => apiRes.data)
+    .catch(errorHandler)
   },
+
+  modifyProfile(userInfo) {
+    return service
+      .patch("/profile/edit", userInfo)
+      .then((apiRes) => apiRes.data)
+      .catch(errorHandler)
+  },
+
+  deleteProfile() {
+    return service
+      .delete("/profile")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+
+  //Trips 
+  getAllTrips() {
+    return service  
+      .get("/trip")
+      .then((apiRes) => apiRes.data)
+      .catch(errorHandler)
+  },
+
+  getOneTrip(id) {
+    return service 
+      .get("/trip/" + id)
+      .then((apiRes) => apiRes.data)
+      .catch(errorHandler)
+  },
+  
+  createTrip(data) {
+    return service
+    .post("/trip", data)
+    .then((apiRes) => apiRes.data)
+    .catch(errorHandler)
+  },
+
+  modifyTrip(id, data) {
+    return service  
+      .patch("/trip/" + id, data)
+      .then((apiRes) => apiRes.data)
+      .catch(errorHandler)
+  },
+
+  deleteTrip(id) {
+    return service
+      .delete("/trip/" + id)
+      .then((apiRes) => apiRes.data)
+      .catch(errorHandler)
+  },
+
+  // AMADEUS API 
+  getParisActivities() {
+    return service
+      .get()
+  }
+
+  
 };

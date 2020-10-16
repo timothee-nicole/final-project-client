@@ -1,0 +1,54 @@
+.form {
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    /* position: absolute; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5% 10%;
+    padding: 5% 0%;
+    width: 80%;
+}
+input {
+    width: 40%;
+}
+
+.backgroundFormSignIn  {
+    background: url("https://dunked.cdn.speedyrails.net/assets/prod/76966/880x0_p1c4p1r26q1srqia761eoo8i8va.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: auto;
+}
+
+.backgroundFormSignUp  {
+    background: url("https://dunked.cdn.speedyrails.net/assets/prod/76966/880x0_p1c4p1r26q1srqia761eoo8i8va.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    width: auto;
+}
+
+.form img {
+    border-radius: 100px;
+    width: 10%
+}
+/* 
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    /* position: absolute; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5% 10%;
+    padding: 5% 0%;
+    width: 80%; 
+    
+    background form calc (100vh -60px)
+    
+    display flex pour centrer form
+    
+    
+    */

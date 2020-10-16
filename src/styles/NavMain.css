@@ -1,6 +1,6 @@
 .NavMain {
   background-color: rgba(0, 9, 134, 0.774);
-  color: rgb(57, 57, 57);
+  color:rgb(255, 255, 255);
   display: flex;
   align-items: center;
   padding: 20px;
@@ -12,6 +12,7 @@
 .NavMain .nav-log {
   margin-left: auto;
   display: flex;
+  color: rgb(255, 255, 255);
 }
 
 .NavMain .nav-list li:not(:last-child) {
