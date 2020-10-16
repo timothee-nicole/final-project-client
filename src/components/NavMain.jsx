@@ -6,18 +6,12 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import "../styles/NavMain.css";
 import DestinationList from "./DestinationList";
-// import { makeStyles } from '@material-ui/core/styles';
+import AddBoxIcon from '@material-ui/icons/AddBox';
 
 
 
  class NavMain extends React.Component {
 
-
-
-  toggleDestinationList = () => {
-    console.log("titi")
-    React.createElement(DestinationList)
-  }
 
   handleLogout = () => {
     apiHandler
@@ -35,12 +29,23 @@ import DestinationList from "./DestinationList";
     return (
       <nav className="NavMain">
       <NavLink exact to="/">
-        <img src="./images/logo.png" alt="Logo" />
+        <img src="/images/logo.png" alt="Logo" />
       </NavLink>
-          <p onMouseEnter={this.toggleDestinationList}>toto</p>
           
         {this.props.context.isLoggedIn && (
           <React.Fragment>
+          <ul className="nav-trip">
+            <Button color="secondary" variant="contained">
+              <NavLink to="/create-trip">
+                + Create a New Trip
+              </NavLink>
+            </Button> &nbsp;
+            <Button color="secondary" variant="contained">
+              <NavLink to="/dashboard">
+                My Dashboard
+              </NavLink>
+            </Button> 
+          </ul>
           <ul className="nav-log">
           <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group">
             

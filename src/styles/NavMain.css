@@ -14,6 +14,10 @@
   display: flex;
   color: rgb(255, 255, 255);
 }
+.NavMail .nav-trip {
+  margin-right: auto;
+  display: flex;
+}
 
 .NavMain .nav-list li:not(:last-child) {
   margin-right: 20px;

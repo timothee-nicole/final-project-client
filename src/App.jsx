@@ -9,25 +9,10 @@ import Profile from "./pages/Profile";
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/styles/theme'
+import CreateTrip from "./pages/CreateTrip"
+import OneTrip from "./pages/OneTrip";
 
-function App() {
-
-  // const theme = 
-  //   createMuiTheme({
-  //     palette: {
-  //       primary: {
-  //           main: '#0800a3',
-  //           light: '#554dff',
-  //           dark: '#737373'
-  //       },
-  //       secondary: {
-  //           main: '#f1c232ff',
-  //           light: '#f0cc00'
-  //       }
-  //     },
-    
-  //   })
-  
+function App() {  
 
   return (
     <div className="App">
@@ -39,6 +24,9 @@ function App() {
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
         <ProtectedRoute exact path="/profile" component={Profile} />
+        {/* <ProtectedRoute exact path="/dashboard" Add component dashboard /> */}
+        <ProtectedRoute exact path="/create-trip" component={CreateTrip} />
+        <ProtectedRoute exact path="/trip/:id" component={OneTrip} />
       </Switch>
     </ThemeProvider>
     </div>

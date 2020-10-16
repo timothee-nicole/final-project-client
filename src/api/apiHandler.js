@@ -105,8 +105,64 @@ export default {
   // AMADEUS API 
   getParisActivities() {
     return service
-      .get()
-  }
+      .get("api/amadeus/activities/paris")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
 
-  
+  getLondonActivities() {
+    return service
+      .get("api/amadeus/activities/london")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+
+  getBerlinActivities() {
+    return service
+      .get("api/amadeus/activities/berlin")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+  getBarcelonaActivities() {
+    return service
+      .get("api/amadeus/activities/barcelona")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+
+  getOneActivity(id) {
+    return service  
+      .get("/api/amadeus/activity/" + id)
+      .then((apiRes) => apiRes)
+  },
+
+// OPENTRIPMAP API
+  getParisPointsOfInterest() {
+    return service
+      .get("api/openTripMap/paris")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+
+  getLondonPointsOfInterest() {
+    return service
+      .get("api/openTripMap/london")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+
+  getBerlinPointsOfInterest() {
+    return service
+      .get("api/openTripMap/berlin")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  },
+
+  getBarcelonaPointsOfInterest() {
+    return service
+      .get("api/openTripMap/barcelona")
+      .then((apiRes) => apiRes)
+      .catch(errorHandler)
+  }
+ 
 };
