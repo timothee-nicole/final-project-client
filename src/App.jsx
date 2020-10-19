@@ -9,8 +9,10 @@ import Profile from "./pages/Profile";
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/styles/theme'
-import CreateTrip from "./pages/CreateTrip"
-import OneTrip from "./pages/OneTrip";
+import CreateTrip from "./pages/trip/CreateTrip"
+import OneTrip from "./pages/trip/OneTrip";
+import SearchPage from './pages/SearchPage'
+import UpdateProfile from "./pages/UpdateProfile";
 
 function App() {  
 
@@ -27,6 +29,8 @@ function App() {
         {/* <ProtectedRoute exact path="/dashboard" Add component dashboard /> */}
         <ProtectedRoute exact path="/create-trip" component={CreateTrip} />
         <ProtectedRoute exact path="/trip/:id" component={OneTrip} />
+        <ProtectedRoute exact path="/search" component={SearchPage} />
+        <ProtectedRoute exact path="/profile/edit" component={UpdateProfile} />
       </Switch>
     </ThemeProvider>
     </div>

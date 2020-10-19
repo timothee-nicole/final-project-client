@@ -25,9 +25,9 @@ class FormSignup extends Component {
         : event.target.value;
 
     const key = event.target.name;
-    // console.log(key, value)
-
-    this.setState({ [key]: value });
+    
+    this.setState({ [key]: value, });
+    console.log(this.state)
   };
 
   handleSubmit = (event) => {
@@ -56,7 +56,7 @@ class FormSignup extends Component {
 
         <TextField style={{width: '40%'}} variant="outlined" type="text" id="lastName" label='Last Name' name="lastName" /><br />
         
-        <TextField style={{width: '40%'}} variant="outlined" type="date" id="birthDate" name="birthDate"/><br />
+        {/* <TextField style={{width: '40%'}} variant="outlined" type="date" id="birthDate" name="birthDate"/><br /> */}
         
         <TextField style={{width: '40%'}} variant="outlined" type="email" id="email" label='E-mail' name="email" /><br />
         

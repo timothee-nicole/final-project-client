@@ -5,8 +5,6 @@ import apiHandler from "../api/apiHandler";
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import "../styles/NavMain.css";
-import DestinationList from "./DestinationList";
-import AddBoxIcon from '@material-ui/icons/AddBox';
 
 
 
@@ -50,7 +48,7 @@ import AddBoxIcon from '@material-ui/icons/AddBox';
           <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group">
             
               <Button><NavLink to="/profile">
-                {this.props.context.user && this.props.context.user.email}
+                {this.props.context.user && this.props.context.user.firstName}
               </NavLink></Button>
             
             <Button>

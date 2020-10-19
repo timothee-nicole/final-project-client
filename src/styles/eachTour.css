@@ -1,0 +1,22 @@
+.tourCards {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+.tourCards img {
+    width: 15%;
+    height: auto;
+    margin: 3px
+}
+
+.tourDescription {
+    width: 60%;
+}
+
+.bookTour {
+    display: flex;
+    flex-direction: column;
+}

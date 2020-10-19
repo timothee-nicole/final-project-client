@@ -55,7 +55,7 @@ export default {
   modifyProfile(userInfo) {
     return service
       .patch("/profile/edit", userInfo)
-      .then((apiRes) => apiRes.data)
+      .then((apiRes) => apiRes)
       .catch(errorHandler)
   },
 
@@ -102,67 +102,25 @@ export default {
       .catch(errorHandler)
   },
 
-  // AMADEUS API 
-  getParisActivities() {
+  // new Tour DB
+  getActivities(desti) {
     return service
-      .get("api/amadeus/activities/paris")
-      .then((apiRes) => apiRes)
-      .catch(errorHandler)
-  },
-
-  getLondonActivities() {
-    return service
-      .get("api/amadeus/activities/london")
-      .then((apiRes) => apiRes)
-      .catch(errorHandler)
-  },
-
-  getBerlinActivities() {
-    return service
-      .get("api/amadeus/activities/berlin")
-      .then((apiRes) => apiRes)
-      .catch(errorHandler)
-  },
-  getBarcelonaActivities() {
-    return service
-      .get("api/amadeus/activities/barcelona")
+      .get("/activity/destination/" + desti)
       .then((apiRes) => apiRes)
       .catch(errorHandler)
   },
 
   getOneActivity(id) {
     return service  
-      .get("/api/amadeus/activity/" + id)
+      .get("/activity/" + id)
       .then((apiRes) => apiRes)
   },
 
 // OPENTRIPMAP API
-  getParisPointsOfInterest() {
+  getPointsOfInterest(desti) {
     return service
-      .get("api/openTripMap/paris")
+      .get("api/openTripMap/" + desti)
       .then((apiRes) => apiRes)
       .catch(errorHandler)
   },
-
-  getLondonPointsOfInterest() {
-    return service
-      .get("api/openTripMap/london")
-      .then((apiRes) => apiRes)
-      .catch(errorHandler)
-  },
-
-  getBerlinPointsOfInterest() {
-    return service
-      .get("api/openTripMap/berlin")
-      .then((apiRes) => apiRes)
-      .catch(errorHandler)
-  },
-
-  getBarcelonaPointsOfInterest() {
-    return service
-      .get("api/openTripMap/barcelona")
-      .then((apiRes) => apiRes)
-      .catch(errorHandler)
-  }
- 
 };
