@@ -48,7 +48,7 @@ export default {
   getProfile() {
     return service
     .get("/profile/me")
-    .then((apiRes) => apiRes.data)
+    .then((apiRes) => apiRes)
     .catch(errorHandler)
   },
 

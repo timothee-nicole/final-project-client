@@ -35,23 +35,11 @@ class OneTrip extends Component {
         
             
         }
-    // componentDidUpdate() {
-    //     console.log('tot')
-    //         const oneDay = 24 * 60 * 60 * 1000
-    //         const numberOfDays = Math.round((Date.parse(this.state.trip.dateEnd) - Date.parse(this.state.trip.dateBegin)) / oneDay) +1;
-    //         // const days = new Array(numberOfDays).keys
-    //     //    const days =  [...Array(numberOfDays).keys()]
-    //     // console.log(days, numberOfDays)
-    //     // return days
-    // }
+
     
     
     render() {
-        console.log(this.state.numberOfDay)
-        // console.log(this.state.trip.dateBegin && Date.parse(this.state.trip.dateBegin))
-        // this.calculate().map((elem, i) => {
-        //     console.log(elem, i)
-        // })
+        this.state.numberOfDay && this.state.trip.tour.map((obj) => console.log(obj))
         return (
             <div>
                 <h1>Wow you are going to {this.capitalize(this.state.trip.destination)}</h1>
@@ -65,6 +53,13 @@ class OneTrip extends Component {
                         })}
                         </tr>
                     </thead>
+                    <tbody>
+                        {this.state.numberOfDay ? this.state.trip.tour.map((obj, i) => {
+                           return ( <tr key={i}>
+                               <td>{obj.name}</td>
+                           </tr>)
+                        }) : (<td> Content is loading</td>)}
+                    </tbody>
                 </table>
             </div>
         )
