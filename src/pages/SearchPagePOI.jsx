@@ -11,7 +11,7 @@ class SearchPagePOI extends Component {
     state = {
         data: "",
         destination: this.props.location.state.trip.destination,
-
+        id: this.props.location.state.trip._id
     }
 
     
@@ -58,7 +58,7 @@ class SearchPagePOI extends Component {
         apiHandler
         .getPointsOfInterest(this.state.destination)
         .then((apiRes) => {
-            console.log(apiRes)
+            // console.log(apiRes)
             const filteredData = apiRes.data.features.filter((obj) => {
                 return obj.properties.rate <= 3
             })
@@ -90,12 +90,10 @@ class SearchPagePOI extends Component {
                                 
                                 
     render() {
-    // console.log('toto :', this.props.location)
-    console.log(this.state)
         return (
             <div>&nbsp;
                 <EachPOI pointsOfInterest={this.state.selectedItem} addToTrip={this.addToTrip} />
-                <AppMap handleSelectItem={this.onSelectItem} destination={this.state.destination} pointsOfInterest={this.state.data}/>
+                <AppMap id={this.state.id} handleSelectItem={this.onSelectItem} destination={this.state.destination} pointsOfInterest={this.state.data}/>
                    
             
             </div>

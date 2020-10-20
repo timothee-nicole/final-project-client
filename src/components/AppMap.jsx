@@ -1,5 +1,8 @@
 import React from "react";
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import Button from '@material-ui/core/Button'
+import {NavLink} from 'react-router-dom'
+
 
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOX_TOKEN,
@@ -57,27 +60,13 @@ class AppMap extends React.PureComponent {
   };
 
   render() {
-    console.log(this.state)
-
-    // const vinegarLayer = (
-    //   <Layer
-    //     type="symbol"
-    //     id="vinegars"
-    //     images={["vinegar-icon", vinegarImg]}
-    //     layout={{ "icon-image": "vinegar-icon" }}
-    //   >
-    //     {vinegars.map((item, index) => (
-    //       <Feature
-    //         key={index}
-    //         onClick={(event) => this.handleClick(item)}
-    //         coordinates={item.location.coordinates}
-    //       />
-    //     ))}
-    //   </Layer>
-    // );
+    // console.log(this.props.id)
 
     return (
         <>
+        <div className='back-button'>
+            <NavLink exact to={`/trip/${this.props.id}`}><Button color="primary" variant="contained" className='back-button'>Back to the Trip Page</Button></NavLink>
+        </div>
      {this.state.lat ? <Map
         style="mapbox://styles/mapbox/light-v10"
         zoom={[this.state.zoom]}
@@ -95,7 +84,6 @@ class AppMap extends React.PureComponent {
              )} 
             </Layer>)  
       
-        {/* {vinegarLayer} */}
     
       </Map> : <div>Content is loading</div>
       }

@@ -4,6 +4,7 @@ import '../styles/dashboard.css'
 import Button from '@material-ui/core/Button'
 
 
+
 class Dashboard extends Component {
 
     state = {
@@ -26,9 +27,26 @@ class Dashboard extends Component {
             .catch((err) => console.log(err))
     }
 
+    handleDelete = (id) => {
+        console.log(id)
+        apiHandler
+            .deleteTrip(id)
+            .then((apiRes) => {
+                // console.log('toto')
+                // const newUser = {...this.state.user}
+                // const idToDelete = newUser.trips.indexOf(id)
+                
+                window.location.reload(false)
+            })
+            .catch((apiErr) => {
+                console.log(apiErr)
+            })
+    }
+
     render() {
-        console.log(this.state.user && this.state.user.trips[0].destination)
+        // console.log(this.state.user && this.state.user.trips[0].destination)
         const loaded = this.state.user && this.state.user.trips
+        console.log(this.props)
 
         return (<>
             <div className="dashboard-head">
@@ -53,7 +71,7 @@ class Dashboard extends Component {
                             <td>{obj.dateBegin.substr(0,10)}</td>
                             <td>{obj.dateEnd.substr(0,10)}</td>
                             <td><a href={`/trip/${obj._id}`}><Button variant="contained" color="primary">View Details</Button></a></td>
-                            <td><Button variant="contained">Delete</Button></td>
+                            <td><Button variant="contained" onClick={() => this.handleDelete(obj._id)}>Delete</Button></td>
                             
                         </tr>))
                          : <td>is Loading</td>}

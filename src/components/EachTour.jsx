@@ -1,12 +1,16 @@
 import React from 'react'
 import '../styles/eachTour.css'
 import Button from '@material-ui/core/Button'
+import {NavLink} from 'react-router-dom'
 
 export default function eachTour(props) {
     let tours = props.tourList
     console.log(props)
     return (
         <div>
+        <div className='back-button'>
+            <NavLink exact to={`/trip/${props.id}`}><Button color="primary" variant="contained" className='back-button'>Back to the Trip Page</Button></NavLink>
+        </div>
             {tours ? tours.map((obj, i) =>{
                 return (
                     <div className="tourCards" key={i}>

@@ -11,7 +11,7 @@ class SearchPage extends Component {
     state = {
         data: "",
         destination: this.props.location.state.trip.destination,
-
+        id: this.props.location.state.trip._id
     }
 
     
@@ -78,7 +78,7 @@ class SearchPage extends Component {
         return (
             <div>
                 <SearchBar handleSearch={this.handleNewSearch}/>
-                <EachTour tourList={this.state.data} addToTrip={this.addToTrip} />
+                <EachTour id={this.state.id} tourList={this.state.data} addToTrip={this.addToTrip} />
             </div>
         )
     }
