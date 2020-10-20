@@ -17,6 +17,8 @@
     border: 1px solid rgba(0, 9, 134, 0.774);
     text-align: center;
 }
-.dashboard-table thead tr {
-    border: 1px solid black
+.dashboard-table tr, .dashboard-table td {
+    border: 1px solid black;
+    padding: 3px;
+    margin: 20px;
 }

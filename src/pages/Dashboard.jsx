@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import apiHandler from '../api/apiHandler'
 import '../styles/dashboard.css'
+import Button from '@material-ui/core/Button'
 
 
 class Dashboard extends Component {
@@ -28,6 +29,7 @@ class Dashboard extends Component {
     render() {
         console.log(this.state.user && this.state.user.trips[0].destination)
         const loaded = this.state.user && this.state.user.trips
+
         return (<>
             <div className="dashboard-head">
                 <h1> Welcome To Your Dashboard</h1>&nbsp;
@@ -48,10 +50,10 @@ class Dashboard extends Component {
                     <tbody>
                         {loaded ? this.state.user.trips.map((obj, i) => (<tr>
                             <td key={i}>{this.capitalize(obj.destination)}</td>
-                            <td>{obj.dateBegin}</td>
-                            <td>{obj.dateEnd}</td>
-                            <td><a href={`/trip/${obj._id}`}>View Details</a></td>
-                            <td>Delete</td>
+                            <td>{obj.dateBegin.substr(0,10)}</td>
+                            <td>{obj.dateEnd.substr(0,10)}</td>
+                            <td><a href={`/trip/${obj._id}`}><Button variant="contained" color="primary">View Details</Button></a></td>
+                            <td><Button variant="contained">Delete</Button></td>
                             
                         </tr>))
                          : <td>is Loading</td>}

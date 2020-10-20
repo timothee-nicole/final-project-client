@@ -11,10 +11,11 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/styles/theme'
 import CreateTrip from "./pages/trip/CreateTrip"
 import OneTrip from "./pages/trip/OneTrip";
-import SearchPage from './pages/SearchPage'
 import UpdateProfile from "./pages/UpdateProfile";
 import Dashboard from "./pages/Dashboard";
 import FooterMain from './components/FooterMain'
+import SearchPagePOI from "./pages/SearchPagePOI";
+import SearchPageActivities from "./pages/SearchPageActivities";
 
 function App() {  
 
@@ -31,8 +32,9 @@ function App() {
         <ProtectedRoute exact path="/dashboard" component={Dashboard} />
         <ProtectedRoute exact path="/create-trip" component={CreateTrip} />
         <ProtectedRoute exact path="/trip/:id" component={OneTrip} />
-        <ProtectedRoute exact path="/search" component={SearchPage} />
+        <ProtectedRoute exact path="/search/activities" component={SearchPageActivities} />
         <ProtectedRoute exact path="/profile/edit" component={UpdateProfile} />
+        <ProtectedRoute exact path="/search/points-of-interest" component={SearchPagePOI} />
       </Switch>
       <FooterMain />
     </ThemeProvider>

@@ -1,7 +1,30 @@
 import React, { Component } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import SearchIcon from '@material-ui/icons/Search';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    color: props => props.color,
+    width: '80%',
+    display: "flex",
+    justifyContent: 'center',
+  },
+  child: {
+    width: '200%',
+  }
+});
+
+const highOrderComponent = (ComponentToPassStyleTo) => {
+  return (props) => 
+    { const classes = useStyles()
+      return <ComponentToPassStyleTo {...props} classes={classes} />}
+}
 
 class SearchBar extends Component {
 
+  
   state ={
     search : "",
     // filter: true
@@ -31,19 +54,20 @@ class SearchBar extends Component {
 //   }
 
   render() {
+    const classes = this.props.classes
     return (
-      <div className="search-bar">
-        <label htmlFor="search">Search</label>
-        <input onChange={this.handleChange} id="search" name="search" type="text" />
-        {/* <div className="checkbox-product">
-          <input type="checkbox"  onClick={this.handleCheck}/>
-          <label name="stock" htmlFor="productsStock">
-            Only show products on stock
-          </label>
-        </div> */}
+      <div className={`search-bar`}>
+        <Grid container spacing={1} alignItems="flex-end" className={classes.root}>
+          <Grid item>
+            <SearchIcon />
+          </Grid>
+          <Grid item>
+            <TextField className={classes.child} label="Search" id="search" name="search" onChange={this.handleChange} />
+          </Grid>
+        </Grid>
       </div>
     );
   }
 }
 
-export default SearchBar
+export default highOrderComponent(SearchBar)
