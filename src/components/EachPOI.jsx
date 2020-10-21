@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button'
 
 export default function eachTour(props) {
     let tours = props.pointsOfInterest
+    console.log(props.pointsOfInterest)
     return (
         <div>
             {tours ?
@@ -17,7 +18,7 @@ export default function eachTour(props) {
                         <p>Tags: {tours.properties.kinds.replaceAll(',', ', ').replaceAll('_', ' ')}</p>  
                     </div>
                     <div className="bookTour">
-                        <Button onClick={() => props.addToTrip(tours.id)} color="primary" variant="contained">
+                        <Button onClick={() => props.addToTrip({geometry: tours.geometry, properties: tours.properties})} color="primary" variant="contained">
                         Add to my trip
                         </Button>
                     </div>

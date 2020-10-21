@@ -4,7 +4,10 @@ import {NavLink} from 'react-router-dom'
 
 export default function DraggableTour(props) {
     const [{isDragging}, drag] = useDrag({
-        item: {type: 'function'},
+        item: {type: 'function', name: props.name, image: props.image, id: props.id},
+        collect: monitor => ({
+            isDragging: !!monitor.isDragging()
+        })
       })
     return (
         <div className="activities-card" ref={drag}>

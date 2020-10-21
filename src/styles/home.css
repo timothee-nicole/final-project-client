@@ -35,12 +35,11 @@
 }
 .image-line div {
     padding: 200px 75px;
-    height: 500px;
     font-size: 34px;
     font-weight: bold;
     text-shadow: rgb(0, 0, 0) 5px 5px 5px;
-    background: url(/images/Berlin-barcelona-paris-london.JPG);
-    background-size: contain;
+    background-image: url(/images/Berlin-barcelona-paris-london.JPG);
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
