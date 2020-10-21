@@ -32,9 +32,18 @@ class Dashboard extends Component {
         apiHandler
             .deleteTrip(id)
             .then((apiRes) => {
-                // console.log('toto')
-                // const newUser = {...this.state.user}
-                // const idToDelete = newUser.trips.indexOf(id)
+                console.log('toto')
+                const newUser = {...this.state.user}
+                const idToDelete = newUser.trips.indexOf(id)
+                newUser.trips.splice(idToDelete, 1)
+                apiHandler
+                    .modifyProfile(newUser)
+                    .then((apiRes) => {
+                        console.log(apiRes)
+                    })
+                    .catch((err) => {
+                        console.log(err)
+                    })
                 
                 window.location.reload(false)
             })

@@ -47,21 +47,21 @@ export default {
 // Profile 
   getProfile() {
     return service
-    .get("/profile/me")
+    .get("/api/profile/me")
     .then((apiRes) => apiRes)
     .catch(errorHandler)
   },
 
   modifyProfile(userInfo) {
     return service
-      .patch("/profile/edit", userInfo)
+      .patch("/api/profile/edit", userInfo)
       .then((apiRes) => apiRes)
       .catch(errorHandler)
   },
 
   deleteProfile() {
     return service
-      .delete("/profile")
+      .delete("/api/profile")
       .then((apiRes) => apiRes)
       .catch(errorHandler)
   },
@@ -69,35 +69,35 @@ export default {
   //Trips 
   getAllTrips() {
     return service  
-      .get("/trip")
+      .get("/api/trip")
       .then((apiRes) => apiRes.data)
       .catch(errorHandler)
   },
 
   getOneTrip(id) {
     return service 
-      .get("/trip/" + id)
+      .get("/api/trip/" + id)
       .then((apiRes) => apiRes.data)
       .catch(errorHandler)
   },
   
   createTrip(data) {
     return service
-    .post("/trip", data)
+    .post("/api/trip", data)
     .then((apiRes) => apiRes.data)
     .catch(errorHandler)
   },
 
   modifyTrip(id, data) {
     return service  
-      .patch("/trip/" + id, data)
+      .patch("/api/trip/" + id, data)
       .then((apiRes) => apiRes.data)
       .catch(errorHandler)
   },
 
   deleteTrip(id) {
     return service
-      .delete("/trip/" + id)
+      .delete("/api/trip/" + id)
       .then((apiRes) => apiRes.data)
       .catch(errorHandler)
   },
@@ -105,14 +105,14 @@ export default {
   // new Tour DB
   getActivities(desti) {
     return service
-      .get("/activity/destination/" + desti)
+      .get("/api/activity/destination/" + desti)
       .then((apiRes) => apiRes)
       .catch(errorHandler)
   },
 
   getOneActivity(id) {
     return service  
-      .get("/activity/" + id)
+      .get("/api/activity/" + id)
       .then((apiRes) => apiRes)
   },
 

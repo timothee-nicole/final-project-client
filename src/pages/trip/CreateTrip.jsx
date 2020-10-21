@@ -54,7 +54,7 @@ class CreateTrip extends Component {
                 .createTrip(this.state)
                 .then((data) => {
                     newUser.trips.push(data._id)
-                    console.log(newUser)
+                    // console.log(newUser)
                     apiHandler
                         .modifyProfile(newUser)
                         .then((res) => {
@@ -65,7 +65,7 @@ class CreateTrip extends Component {
 
                 })
                 .catch((err) => {
-                    console.log(err)
+                    // console.log(err)
                 });
         }
         
@@ -73,7 +73,7 @@ class CreateTrip extends Component {
 
 
     render() {
-        console.log('dans render', this.props.context.user.trips)
+        // console.log('dans render', this.props.context.user.trips)
         return (
             <div>
                 <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
