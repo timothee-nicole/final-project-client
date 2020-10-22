@@ -27,7 +27,7 @@ export default function DragAndDrop(props) {
 
     const markAsDone = (_id, index) => {
         const newTrip = {...props.details}
-        
+
         const org = [...newTrip.organisation]
 
         org.push({tourId: _id, day: index })
@@ -54,7 +54,7 @@ export default function DragAndDrop(props) {
             <div className="activities-and-points">
             </div>
             <div className="points-of-interest">
-                <h1 style={{textDecoration: "underline"}}>Your Points of Interest: </h1>
+                <h1>Your Points of Interest : </h1>
                     <div className="scroll-interest" >
                         {props.details ? props.details.pointsOfInterest.map((obj, i) => {
                             return (<div key={i} style={{display: "flex", flexDirection: "column", margin: "5px"}}>
@@ -67,7 +67,7 @@ export default function DragAndDrop(props) {
             </div>
             </div>
                 <div className='all-activities'>
-                    <h1>Your Activities: </h1>
+                    <h1>Your Activities : </h1>
                     <div style={{display: "flex", flexWrap: "wrap", justifyContent:"center", }}>
                         {props.details ? props.details.tour.map((obj, i) => {
                             return ( <React.Fragment key={i}>
@@ -93,8 +93,8 @@ export default function DragAndDrop(props) {
                             return (<React.Fragment key={indexOfDays}>
                                 <DndProvider backend={HTML5Backend}>
                                      <DropTarget  index={indexOfDays}>
-                                     {props.details && props.details.organisation && props.details.organisation.find(p => p.day === indexOfDays) &&props.details.organisation.find(p => p.day === indexOfDays).day === indexOfDays ?
-                                      <DraggableTour  name={props.details.organisation.find(p => p.day === indexOfDays).tourId.name} image={props.details.organisation.find(p => p.day === indexOfDays).tourId.pictures[0]} /> :   null}
+                                     {props.details && props.details.organisation && props.details.organisation.find(p => p.day === indexOfDays) && props.details.organisation.find(p => p.day === indexOfDays).day === indexOfDays ?
+                                      <DraggableTour  name={props.details.organisation.find(p => p.day === indexOfDays).tourId.name} image={props.details.organisation.find(p => p.day === indexOfDays).tourId.pictures[0]} link={props.details.organisation.find(p => p.day === indexOfDays).tourId.bookingLink}/> :   null}
                                      </DropTarget>
                                 </DndProvider>    
                             </React.Fragment>)})

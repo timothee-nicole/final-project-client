@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import { MenuItem } from '@material-ui/core';
 import Button from '@material-ui/core/Button'
 import apiHandler from '../../api/apiHandler';
+import '../../styles/create-trip.css'
 
 class CreateTrip extends Component {
     state = {
@@ -75,8 +76,8 @@ class CreateTrip extends Component {
     render() {
         // console.log('dans render', this.props.context.user.trips)
         return (
-            <div>
-                <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+            <div className="create-trip">
+                <form className="create-trip-form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
             <h1>Create Your Trip !</h1>
             &nbsp;
             <p>Start by picking your trip dates and the destination you are going to ! <br /><br /> You will then arrive on your Trip page from which you can have a look at what you planned. <br/><br /> You will also be able to search for interesting activities and points of interest in that destination, pick them up and let us create the perfect schedule ! </p><br /> <br />

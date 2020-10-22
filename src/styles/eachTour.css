@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+
 .tourCards {
     display: flex;
     justify-content: space-evenly;
@@ -9,6 +12,18 @@
     
 }
 
+.tourCards h2, .tourCards h3, .tourCards p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.tourCards h2 {
+    font-size: 25px;
+}
+
+.tourCards h3 {
+    font-size: 18px;
+}
+
 .tourCards img {
     width: 200px;
     height: 100%;
@@ -16,10 +31,18 @@
 }
 
 .tourDescription {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     width: 60%;
 }
 
 .bookTour {
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    /* justify-content: space-around ; */
+}
+
+.add-to-trip {
     display: flex;
     flex-direction: column;
     justify-content: space-around ;
@@ -43,4 +66,8 @@
     display: flex;
     z-index: 10;
     justify-content: center;
+}
+
+.tourDescription h2:hover {
+    color: #0800a3;
 }

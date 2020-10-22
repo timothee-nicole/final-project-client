@@ -31,14 +31,14 @@ export default function DraggableTour(props) {
             isDragging: !!monitor.isDragging()
         })
       })
-
+      console.log(props)
     return (
         <div className="activities-card" ref={drag}>
-            {/* <NavLink exact to={props.link}> */}
+            <NavLink exact to={`/activity/${props.id}`}>
             <img style={{width: '100%'}} src={props.image} alt={props.name}/>
-            <p>{props.name.substr(0, 18)}...</p>
+            <p>{props.name.substr(0, 23)}...</p>
             <DeleteForeverIcon onClick={() => handleDelete(props.id)}/>
-            {/* </NavLink> */}
+            </NavLink>
         </div>
     )
 }

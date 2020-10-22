@@ -57,7 +57,7 @@ class Dashboard extends Component {
         const loaded = this.state.user && this.state.user.trips
         console.log(this.props)
 
-        return (<>
+        return (<section className="dashboard">
             <div className="dashboard-head">
                 <h1> Welcome To Your Dashboard</h1>&nbsp;
                 <h3> This is the place to manage your trips ! </h3>&nbsp;
@@ -76,9 +76,9 @@ class Dashboard extends Component {
                     </thead>
                     <tbody>
                         {loaded ? this.state.user.trips.map((obj, i) => (<tr>
-                            <td key={i}>{this.capitalize(obj.destination)}</td>
-                            <td>{obj.dateBegin.substr(0,10)}</td>
-                            <td>{obj.dateEnd.substr(0,10)}</td>
+                            <td key={i} className="to-stylize">{this.capitalize(obj.destination)}</td>
+                            <td className="to-stylize">{obj.dateBegin.substr(0,10)}</td>
+                            <td className="to-stylize">{obj.dateEnd.substr(0,10)}</td>
                             <td><a href={`/trip/${obj._id}`}><Button variant="contained" color="primary">View Details</Button></a></td>
                             <td><Button variant="contained" onClick={() => this.handleDelete(obj._id)}>Delete</Button></td>
                             
@@ -87,7 +87,7 @@ class Dashboard extends Component {
                     </tbody>
                 </table>
 
-            </>
+            </section>
         )
     }
 }

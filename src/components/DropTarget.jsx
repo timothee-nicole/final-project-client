@@ -22,5 +22,5 @@ export default function DropTarget(props) {
     });
     // console.log(props.index) // ApiHandler -> set Tour day X == props.index
 
-  return (<td ref={drop} style={{heigth: '50px', width: '50px', margin: '10px', padding:'10px', background:'#fff', backgroundColor: isOver ? 'cornflowerblue' : "white"}} onDrop={handleDrop} value={props.key}> Drop the Activity here ! {props.children}</td>)
+  return (<td ref={drop} style={{backgroundColor: isOver ? 'cornflowerblue' : "white"}} onDrop={handleDrop} value={props.key}> Drop the Activity here ! {props.children}</td>)
 }

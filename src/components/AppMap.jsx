@@ -72,9 +72,9 @@ class AppMap extends React.PureComponent {
         zoom={[this.state.zoom]}
         containerStyle={{
           top: 70,
-          left: 5,
+          left: 0,
           bottom: 5,
-          right: 5,
+          right: 0,
           position: 'fixed'}}
           center={[this.state.lng, this.state.lat]} >
     

@@ -16,7 +16,9 @@ export default function eachTour(props) {
                     <div className="tourCards" key={i}>
                     <img src={obj.pictures[0]} alt={obj.name} />
                     <div className="tourDescription">
+                        <NavLink exact to={`/activity/${obj._id}`}>
                         <h2>{obj.name}</h2>
+                        </NavLink>
                         <p>{obj.shortDescription}</p>
                     </div>
                     <div className="bookTour">

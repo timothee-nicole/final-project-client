@@ -1,28 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+
 .home {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-evenly;
     background-image: url("https://thepostcalvin.com/wp-content/uploads/2016/02/map-with-pins-for-GV.jpg");
     background-size: cover;
     background-position: bottom;
     padding: 30px;
+    height: 400px;
     margin: 10px 0px;
     border: 1px solid rgb(156, 156, 156)
 }
 
 .home p {
-    margin: 10px;
     font-weight: bold;
-    font-size: 20px;
-    color: white;
-    text-shadow: rgb(0, 0, 0) 2px 0 10px;;
+    font-size: 25px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: black;
+    text-shadow: white  2px 0 5px;
 }
 
 .home h1 {
-    font-size: 40px;
-    color: #f1c232ff;
-    text-shadow: #0800a3 2px 0 10px;
+    font-size: 50px;
+    color:#0800a3;
+    text-shadow: #f1c232ff  2px 0 10px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
 }
 .image-line {
     display: flex;
@@ -34,12 +41,15 @@
 
 }
 .image-line div {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 60px;
     padding: 200px 75px;
-    font-size: 34px;
+    width: 100%;
     font-weight: bold;
     text-shadow: rgb(0, 0, 0) 5px 5px 5px;
     background-image: url(/images/Berlin-barcelona-paris-london.JPG);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 

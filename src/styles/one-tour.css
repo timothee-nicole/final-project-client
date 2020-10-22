@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+
+.one-tour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.one-tour h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    margin: 10px;
+    padding: 15px 50px;
+}
+
+.one-tour h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 25px;
+    margin: 10px;
+}
+
+
+.one-tour p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 23px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(255, 250, 244);
+    border: 1px solid black
+}
+.one-tour img {
+    width: 50%
+}

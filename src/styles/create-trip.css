@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+.create-trip-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 50px 200px;
+    padding: 20px 100px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.create-trip {
+    display: flex;
+    background-image: url("https://theroadtrippers.fr/wp-content/uploads/2018/05/alice-hampson-5713-unsplash-1000x595.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+}

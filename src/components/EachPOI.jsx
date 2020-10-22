@@ -17,7 +17,7 @@ export default function eachTour(props) {
                         {'☆'.repeat(3 - Math.round(tours.properties.rate))}</p>
                         <p>Tags: {tours.properties.kinds.replaceAll(',', ', ').replaceAll('_', ' ')}</p>  
                     </div>
-                    <div className="bookTour">
+                    <div className="add-to-trip">
                         <Button onClick={() => props.addToTrip({geometry: tours.geometry, properties: tours.properties})} color="primary" variant="contained">
                         Add to my trip
                         </Button>

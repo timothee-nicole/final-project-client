@@ -1,5 +1,11 @@
-.dashboard-head {
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+.dashboard {
     display: flex;
+    flex-direction: column;
+}
+
+.dashboard-head {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -8,6 +14,8 @@
     border-radius: 10px;
     background-color: rgb(253, 218, 123);
     border: 1px solid rgba(0, 9, 134, 0.774);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
 }
 
 .dashboard-head h1, .dashboard-head h3 {
@@ -16,9 +24,21 @@
 .dashboard-table {
     border: 1px solid rgba(0, 9, 134, 0.774);
     text-align: center;
+    margin: 30px 60px 60px;
+}
+
+.dashboard-table thead {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+    background-color: rgb(182, 211, 255);
 }
 .dashboard-table tr, .dashboard-table td {
     border: 1px solid black;
-    padding: 3px;
+    padding: 10px;
     margin: 20px;
+}
+
+.to-stylize {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
 }

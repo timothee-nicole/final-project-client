@@ -16,6 +16,7 @@ import Dashboard from "./pages/Dashboard";
 import FooterMain from './components/FooterMain'
 import SearchPagePOI from "./pages/SearchPagePOI";
 import SearchPageActivities from "./pages/SearchPageActivities";
+import OneTour from "./pages/OneTour"
 
 function App() {  
 
@@ -33,6 +34,7 @@ function App() {
         <ProtectedRoute exact path="/create-trip" component={CreateTrip} />
         <ProtectedRoute exact path="/trip/:id" component={OneTrip} />
         <ProtectedRoute exact path="/search/activities" component={SearchPageActivities} />
+        <ProtectedRoute exact path="/activity/:id" component={OneTour} />
         <ProtectedRoute exact path="/profile/edit" component={UpdateProfile} />
         <ProtectedRoute exact path="/search/points-of-interest" component={SearchPagePOI} />
       </Switch>
