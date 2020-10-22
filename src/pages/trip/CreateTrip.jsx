@@ -82,8 +82,8 @@ class CreateTrip extends Component {
             &nbsp;
             <p>Start by picking your trip dates and the destination you are going to ! <br /><br /> You will then arrive on your Trip page from which you can have a look at what you planned. <br/><br /> You will also be able to search for interesting activities and points of interest in that destination, pick them up and let us create the perfect schedule ! </p><br /> <br />
                     <div>
-                    <TextField style={{width: '45%'}} type="date" variant="outlined" defaultValue="2020-07-14" label="Start Date" name="dateBegin" required/> &nbsp; 
-                    <TextField style={{width: '45%'}} type="date" variant="outlined" defaultValue="2020-07-21" label="End Date" name="dateEnd" required/>
+                    <TextField style={{width: '45%'}} type="date" variant="outlined" defaultValue="2020-10-23" label="Start Date" name="dateBegin" required/> &nbsp; 
+                    <TextField style={{width: '45%'}} type="date" variant="outlined" defaultValue="2020-10-30" label="End Date" name="dateEnd" required/>
                     </div><br />
 
                     <FormControl variant="outlined" style={{width: '70%'}}>

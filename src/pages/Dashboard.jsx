@@ -83,7 +83,7 @@ class Dashboard extends Component {
                             <td><Button variant="contained" onClick={() => this.handleDelete(obj._id)}>Delete</Button></td>
                             
                         </tr>))
-                         : <td>is Loading</td>}
+                         : <td>You Haven't Created a trip yet</td>}
                     </tbody>
                 </table>
 

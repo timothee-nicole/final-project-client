@@ -17,6 +17,7 @@ import FooterMain from './components/FooterMain'
 import SearchPagePOI from "./pages/SearchPagePOI";
 import SearchPageActivities from "./pages/SearchPageActivities";
 import OneTour from "./pages/OneTour"
+import error from "./pages/Error";
 
 function App() {  
 
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/error" component={error} />
         <ProtectedRoute exact path="/profile" component={Profile} />
         <ProtectedRoute exact path="/dashboard" component={Dashboard} />
         <ProtectedRoute exact path="/create-trip" component={CreateTrip} />

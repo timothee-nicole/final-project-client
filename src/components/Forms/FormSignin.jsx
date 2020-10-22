@@ -59,7 +59,9 @@ class FormSignin extends Component {
         {/* <label htmlFor="password">Password</label> */}
         <TextField style={{width: '40%'}} type="password" id="password" variant="outlined" label="Password" name="password" className="input"/>
         <br />
-        <Button color="primary" variant="contained" type="button" onClick={this.handleSubmit}>Submit</Button>
+        <Button color="primary" variant="contained" type="button" onClick={this.handleSubmit}>Submit</Button><br/>
+        <a href="/signup" style={{textDecoration: "underline", color: "blue"}}>Don't have an account yet ? Sign up</a>
+
       </form>
       </div>
     );

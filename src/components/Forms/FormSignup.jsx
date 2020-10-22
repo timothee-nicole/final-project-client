@@ -63,7 +63,9 @@ class FormSignup extends Component {
         <TextField style={{width: '40%'}} variant="outlined" type="password" id="password" label='Password' name="password" /><br />
 
 
-        <Button color="primary" variant="contained" onClick={this.handleSubmit}>Submit</Button>
+        <Button style={{margin: "10px"}} color="primary" variant="contained" onClick={this.handleSubmit}>Submit</Button>
+        <a href="/signin" style={{textDecoration: "underline", color: "blue" , margin: "10px"}}>Already have an account ? Sign in</a>
+        <p>By signing up, you agree to CodePen's <a href="/error" style={{textDecoration: "underline", color: "blue"}}>Terms of Service</a>  and <a href="/error" style={{textDecoration: "underline", color: "blue"}}>Privacy Policy.</a></p>
       </form>
       </div>
     );
