@@ -1,24 +1,29 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {withUser} from '../components/Auth/withUser'
+import Button from '@material-ui/core/Button'
+import '../styles/profile.css'
 
 const Profile = (props) => {
   const userProfile = props.context.user
   
-  console.log(userProfile)
+  // console.log(userProfile)
   return (
-    <div>
-      <h1> Welcome on your Profile Page Dear {userProfile.firstName}</h1>
+    <div className='profile'>
+      <h1> Hey {userProfile.firstName} !</h1> &nbsp;
+    <div className="profile-details">
       <img src={userProfile.profilePicture} alt={userProfile.firstName}/>
       <h3>Please find your information below : </h3>
-      <ul>
-        <li>First Name : {userProfile.firstName}</li>
-        <li>Last Name : {userProfile.lastName}</li>
-        <li>E-mail : {userProfile.email}</li>
+        <p>First Name : {userProfile.firstName}<br/>
+        Last Name : {userProfile.lastName}<br/>
+        E-mail : {userProfile.email}</p>
+    </div>
 
-      </ul>
-
-      I you wish to modify your information, please click <NavLink to="/profile/edit">here</NavLink>
+   <NavLink to="/profile/edit">
+      <Button color="primary" variant="contained">
+        Modify My Profile 
+      </Button>
+    </NavLink>
     </div>
   );
 };

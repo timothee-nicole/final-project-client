@@ -3,7 +3,6 @@ import apiHandler from '../api/apiHandler'
 import AppMap from '../components/AppMap'
 import { withUser } from '../components/Auth/withUser'
 import EachPOI from '../components/EachPOI'
-import SearchBar from '../components/SearchBar'
 
 
 class SearchPagePOI extends Component {

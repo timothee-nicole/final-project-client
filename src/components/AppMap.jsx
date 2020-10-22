@@ -68,7 +68,7 @@ class AppMap extends React.PureComponent {
             <NavLink exact to={`/trip/${this.props.id}`}><Button color="primary" variant="contained" className='back-button'>Back to the Trip Page</Button></NavLink>
         </div>
      {this.state.lat ? <Map
-        style="mapbox://styles/mapbox/light-v10"
+        style={"mapbox://styles/mapbox/light-v10"}
         zoom={[this.state.zoom]}
         containerStyle={{
           top: 70,

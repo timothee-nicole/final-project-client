@@ -46,7 +46,7 @@ class FormSignin extends Component {
         
     }
       render() {
-        console.log(this.state)
+        // console.log(this.state)
     return (
       <div className='backgroundFormSignIn'>
       {/* // rajouter le handlesubmit onkeypress 13(Je crois) si t'as le temps */}

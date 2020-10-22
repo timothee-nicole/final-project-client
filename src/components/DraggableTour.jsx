@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom'
 import apiHandler from '../api/apiHandler';
 
 export default function DraggableTour(props) {
-    // console.log(props)
+   
 
     const handleDelete = (id) => {
         // console.log(props.id)
@@ -31,6 +31,7 @@ export default function DraggableTour(props) {
             isDragging: !!monitor.isDragging()
         })
       })
+
     return (
         <div className="activities-card" ref={drag}>
             {/* <NavLink exact to={props.link}> */}

@@ -17,15 +17,16 @@
     align-items: center;
 }
 
-.one-tripzx h1{
+.one-trip h1{
     font-size: 34px;
     color: white;
-    text-shadow: rgb(0, 0, 0) 5px 5px 5px;
+    text-shadow: rgb(0, 0, 0) 5px 0px 5px;
 }
 
 .one-trip .destination p {
     text-align: center;
     margin: 60px;
+    
     font-size: 20px;
     color: white;
     text-shadow: rgb(0, 0, 0) 3px 0px 5px;
@@ -54,11 +55,53 @@
     flex-wrap: wrap;
     justify-content: center;
     border: 1px solid black;
+    background-color: rgb(255, 250, 244);
     border-radius: 10px;
     padding: 10px;
     margin: 5px
 
 }
-.activities-and-point {
+
+.all-activities h1 {
+    color: blue;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+
+
+.points-of-interest {
+    background-color: rgb(255, 250, 244);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.points-of-interest h1 {
+    color: blue;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+.scroll-interest {
     display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    overflow-y: scroll; 
+    height: 100px;
+    background-color: rgb(255, 250, 244);
+}
+
+.one-trip table {
+    max-width: 90vw;
+}
+
+.one-trip td {
+    border: 1px solid black;
+}
+
+.trip-table {
+    width: 90vw;
+    overflow-x: scroll;
 }

@@ -37,7 +37,10 @@ class OneTrip extends Component {
             }); 
         }
 
-    
+        
+        handleTour = (tour) => {
+            this.setState({trip:tour})
+        }
     
     render() {
         // this.state.numberOfDay && this.state.trip.tour.map((obj) => console.log(obj))
@@ -58,7 +61,7 @@ class OneTrip extends Component {
                     </Link> 
                 </Button>&nbsp;
             </div>
-            {this.state.numberOfDay ? <DragAndDrop details={this.state.trip} numberOfDay={this.state.numberOfDay}/> : <div>Content is loading ...</div>}
+            {this.state.numberOfDay ? <DragAndDrop handleTour={this.handleTour} details={this.state.trip} numberOfDay={this.state.numberOfDay}/> : <div>Content is loading ...</div>}
             </section>
         )
     }
