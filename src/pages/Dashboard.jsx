@@ -27,14 +27,18 @@ class Dashboard extends Component {
             .catch((err) => console.log(err))
     }
 
-    handleDelete = (id) => {
-        console.log(id)
+    handleDelete = (idToFind) => {
+        console.log(idToFind)
         apiHandler
-            .deleteTrip(id)
+            .deleteTrip(idToFind)
             .then((apiRes) => {
                 console.log('toto')
                 const newUser = {...this.state.user}
-                const idToDelete = newUser.trips.indexOf(id)
+                console.log(newUser.trips)
+                const idToDelete = newUser.trips.find(elem => elem._id === idToFind)
+                console.log(idToDelete)
+                const indexToSplice = newUser.trips.indexOf(idToDelete)
+                console.log(indexToSplice)
                 newUser.trips.splice(idToDelete, 1)
                 apiHandler
                     .modifyProfile(newUser)

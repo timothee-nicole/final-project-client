@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
 .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px;
     padding-bottom: 30px;
+}
+
+.profile h1, .profile p, .profile h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
 }
 
 .profile img {

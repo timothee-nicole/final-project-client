@@ -14,7 +14,7 @@ class Home extends React.Component {
       <div className="home">
         <h1>Welcome To Trip & Karmeliet</h1>
         <p>With T&K planning your holiday has never been so easy !</p>
-        <p> Pick a destination, choose your activities, and hop-on the next plane to live an unforgettable adventure</p><br />
+        <p> Pick a destination, choose your activities, as well as what you want to see, and hop-on the next plane to live an unforgettable adventure</p><br />
       {this.props.context.isLoggedIn ?
       (<NavLink exact to="/create-trip"><Button variant="contained" color="primary">Create my first Trip !</Button></NavLink>)
       : 
